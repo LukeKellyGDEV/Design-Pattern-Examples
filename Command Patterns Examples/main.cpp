@@ -3,6 +3,7 @@
 #include <conio.h>
 #include <vector>
 #include <stack>
+#include <memory>
 
 #define Key_UP 72
 #define Key_Down 80
@@ -13,18 +14,17 @@
 
 int main()
 {
-	srand(time(NULL));
 
 	Character luke("luke");
-	std::stack<Command*> commandStack;
+	std::vector<std::unique_ptr<Command>> commandStack;
 	bool bTesting = true;
 	bool Undo = false;
+	std::unique_ptr<Move> move = std::make_unique<Move>();
 
 	while (bTesting)
 	{
 		int dx = 0, dy = 0;
 		char Key = _getch();
-		Move* move = new Move();
 		switch (Key)
 		{
 		case Key_UP:
@@ -45,7 +45,6 @@ int main()
 			break;
 		case Key_RKey:
 			Undo = true;
-			std::cout << "Poopie" << std::endl;
 			break;
 		case Key_ESC:
 			bTesting = false;
@@ -53,18 +52,21 @@ int main()
 		default:
 			continue;
 		}
-
-
 		if (Undo)
 		{
-			commandStack.pop();
-			move->undo(luke);
+			if (!commandStack.empty())
+			{
+				commandStack.back()->undo(&luke);
+				commandStack.pop_back();
+			}
 		}
 		else
 		{
-			commandStack.push(move);
-			move->execute(luke, dx, dy);
+			auto move = std::make_unique<Move>();
+			move->execute(&luke, dx, dy);
+			commandStack.push_back(std::move(move));
 		}
+		std::cout << commandStack.size() << std::endl;
 	}
 	return 0;
 }

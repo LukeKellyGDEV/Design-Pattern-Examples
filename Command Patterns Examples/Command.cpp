@@ -2,18 +2,18 @@
 #include <ctime>
 #include <cstdlib>
 
-void Move::execute(Character& c, int XValue, int YValue)
+void Move::execute(Character* c, int XValue, int YValue)
 {
-	c.move(XValue, YValue, false);
 	x = XValue;
 	y = YValue;
-	std::cout << c.name << " moved " << x << "," << y << std::endl;
-	c.printPosition();
+	c->move(XValue, YValue, false);
+	std::cout << c->name << " moved " << x << "," << y << std::endl;
+	c->printPosition();
 }
 
-void Move::undo(Character& c)
+void Move::undo(Character* c)
 {
-	c.move(x, y , true);
-	std::cout << c.name << " Undo " << -x << "," << -y << std::endl;
-	c.printPosition();
+	c->move(x, y , true);
+	std::cout << c->name << " Undo " << -x << "," << -y << std::endl;
+	c->printPosition();
 }

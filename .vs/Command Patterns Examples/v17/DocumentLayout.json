@@ -32,23 +32,9 @@
               "RelativeDocumentMoniker": "Command Patterns Examples\\main.cpp",
               "ToolTip": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\main.cpp",
               "RelativeToolTip": "Command Patterns Examples\\main.cpp",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAADwAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-07-25T08:39:55.33Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Command.h",
-              "DocumentMoniker": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\Command.h",
-              "RelativeDocumentMoniker": "Command Patterns Examples\\Command.h",
-              "ToolTip": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\Command.h",
-              "RelativeToolTip": "Command Patterns Examples\\Command.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-25T08:40:52.098Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
@@ -60,10 +46,23 @@
               "RelativeDocumentMoniker": "Command Patterns Examples\\Command.cpp",
               "ToolTip": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\Command.cpp",
               "RelativeToolTip": "Command Patterns Examples\\Command.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAD4vw8AAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAD4vwoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-07-25T08:48:33.276Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Command.h",
+              "DocumentMoniker": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\Command.h",
+              "RelativeDocumentMoniker": "Command Patterns Examples\\Command.h",
+              "ToolTip": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\Command.h",
+              "RelativeToolTip": "Command Patterns Examples\\Command.h",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAACoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-25T08:40:52.098Z",
               "EditorCaption": ""
             }
           ]

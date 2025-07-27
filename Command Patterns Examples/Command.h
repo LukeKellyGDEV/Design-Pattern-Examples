@@ -32,15 +32,15 @@ class Command
 {
 public :
 	virtual ~Command() {}
-	virtual void execute(Character& c, int XValue, int YValue) = 0;
-	virtual void undo(Character& c) = 0;
+	virtual void execute(Character* c, int XValue, int YValue) = 0;
+	virtual void undo(Character* c) = 0;
 };
 
 class Move : public Command
 {
 public:
-	void execute(Character& c, int XValue, int YValue);
-	void undo(Character& c);
+	void execute(Character* c, int XValue, int YValue);
+	void undo(Character* c);
 private:
 	int x;
 	int y;
