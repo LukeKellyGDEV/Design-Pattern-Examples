@@ -7,11 +7,24 @@ struct Character
 	int x;
 	int y;
 	std::string name;
-	Character(std::string newName) : name(newName){}
-	void move(int newX, int newY) 
+	Character(std::string newName) : name(newName), x(0), y (0){}
+	void move(int newX, int newY, bool bUndo) 
 	{
-		x = newX;
-		y = newY;  
+		if (bUndo)
+		{
+			x -= newX;
+			y -= newY;
+		}
+		else
+		{
+			x += newX;
+			y += newY;
+		}
+	}
+	void printPosition()
+	{
+		std::cout << "Characters Position in the World: " << x << "," << y << std::endl;
+		std::cout << "\n";
 	}
 };
 
@@ -19,14 +32,17 @@ class Command
 {
 public :
 	virtual ~Command() {}
-	virtual void execute(Character& c) = 0;
+	virtual void execute(Character& c, int XValue, int YValue) = 0;
 	virtual void undo(Character& c) = 0;
 };
 
 class Move : public Command
 {
 public:
-	void execute(Character& c);
+	void execute(Character& c, int XValue, int YValue);
 	void undo(Character& c);
+private:
+	int x;
+	int y;
 };
 

@@ -1,4 +1,5 @@
-﻿  Command.cpp
-  Command Patterns Examples.vcxproj -> C:\GitHub\Command-Pattern-Examples\x64\Debug\Command Patterns Examples.exe
+﻿  main.cpp
+C:\Github\Command-Pattern-Examples\Command Patterns Examples\main.cpp(16,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Command Patterns Examples.vcxproj -> C:\Github\Command-Pattern-Examples\x64\Debug\Command Patterns Examples.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
