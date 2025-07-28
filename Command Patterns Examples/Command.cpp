@@ -17,3 +17,12 @@ void Move::undo(Character* c)
 	std::cout << c->name << " Undo " << -x << "," << -y << std::endl;
 	c->printPosition();
 }
+
+void Move::redo(Character* c)
+{
+	c->move(x, y, false);
+	std::cout << c->name << " Redo " << x << "," << y << std::endl;
+	c->printPosition();
+}
+
+

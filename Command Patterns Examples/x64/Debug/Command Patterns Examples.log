@@ -1,4 +1,6 @@
-﻿  main.cpp
+﻿  Command.cpp
+  main.cpp
+  Generating Code...
   Command Patterns Examples.vcxproj -> C:\Github\Command-Pattern-Examples\x64\Debug\Command Patterns Examples.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.
