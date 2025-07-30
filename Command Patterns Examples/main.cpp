@@ -171,17 +171,13 @@ void FlyWeightPatternTrees()
 void ObserverPatternSubject()
 {
 	SomeSubject subject;
-	Watcher Watcher1("Watcher1");
-	Watcher Watcher2("Watcher2");
-	Watcher Watcher3("Watcher3");
-	subject.AddObserver(&Watcher1);
-	subject.AddObserver(&Watcher2);
-	subject.AddObserver(&Watcher3);
+	Watcher Watcher1(subject,"Watcher1");
+	Watcher Watcher2(subject,"Watcher2");
+	Watcher Watcher3(subject,"Watcher3");
+	
 
 	subject.NotifyAll();
 
-	subject.RemoveObserver(&Watcher3);
-
-	subject.NotifyAll();
+	//subject.RemoveObserver(&Watcher3);
 
 }

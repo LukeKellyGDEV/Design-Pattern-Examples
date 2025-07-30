@@ -9,22 +9,6 @@ public:
 	virtual void OnNotify() = 0;
 };
 
-class Watcher : public Observer
-{
-public:
-	explicit Watcher(const std::string& name) : mName(name)
-	{
-	}
-
-	void OnNotify() override
-	{
-		std::cout << "watcher-" << mName << std::endl;
-	}
-
-private:
-	std::string mName;
-};
-
 class Subject
 {
 public:
@@ -50,6 +34,31 @@ public:
 private:
 	std::forward_list<Observer*> mObservers;
 };
+
+class Watcher : public Observer
+{
+public:
+	explicit Watcher(Subject& subject, const std::string& name) : mSubject(subject), mName(name)
+	{
+		mSubject.AddObserver(this);
+	}
+
+	~Watcher()
+	{
+		mSubject.RemoveObserver(this);
+	}
+
+	void OnNotify() override
+	{
+		std::cout << "watcher-" << mName << std::endl;
+	}
+
+private:
+	std::string mName;
+	Subject& mSubject;
+};
+
+
 
 class SomeSubject : public Subject
 {
