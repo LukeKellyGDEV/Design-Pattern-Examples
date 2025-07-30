@@ -1,5 +1,6 @@
 ﻿#include <iostream>
-#include "Command.h"
+#include "CommandUndoRedo.h"
+#include "CommandInputHandler.h"
 #include <conio.h>
 #include <vector>
 #include <stack>
@@ -13,13 +14,22 @@
 #define Key_UKey 'u'
 #define Key_ESC 27
 
+bool bTesting = true;
+void CommandPatternUndoRedo();
+void CommandPatternInputHandler();
+
 int main()
 {
+	//CommandPatternUndoRedo();
+	CommandPatternInputHandler();
+	return 0;
+}
 
+void CommandPatternUndoRedo()
+{
 	Character luke("luke");
-	std::vector<std::unique_ptr<Command>> commandStack;
-	std::vector<std::unique_ptr<Command>> RedoStack;
-	bool bTesting = true;
+	std::vector<std::unique_ptr<CommandUndoRedo>> commandStack;
+	std::vector<std::unique_ptr<CommandUndoRedo>> RedoStack;
 	bool Undo = false;
 	bool redo = false;
 	std::unique_ptr<Move> move = std::make_unique<Move>();
@@ -92,5 +102,43 @@ int main()
 			RedoStack.clear();
 		}
 	}
-	return 0;
+}
+
+void CommandPatternInputHandler()
+{
+	GameActor a(1);
+	GameActor b(2);
+
+	std::unique_ptr<CommandInputHandler> UpButton = std::make_unique<JumpCommand>();
+	std::unique_ptr<CommandInputHandler> DownButton = std::make_unique<FireCommand>();
+	std::unique_ptr<CommandInputHandler> LeftButton = std::make_unique<SwapWeaponCommand>();
+	std::unique_ptr<CommandInputHandler> RightButton = std::make_unique<MeleeCommand>();
+	
+	while (bTesting)
+	{
+		char Key = _getch();
+		switch (Key)
+		{
+		case Key_UP:
+			UpButton->Execute(a);
+			break;
+		case Key_Down:
+			DownButton->Execute(a);
+			break;
+		case Key_Left:
+			LeftButton->Execute(b);
+			break;
+		case Key_Right:
+			RightButton->Execute(b);
+			break;
+		case Key_RKey:
+			UpButton = std::make_unique<FireCommand>();// this changes the UpButton to a fireCommand.
+			break;
+		case Key_ESC:
+			bTesting = false;
+			continue;
+		default:
+			continue;
+		}
+	}
 }
