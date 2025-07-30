@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\GitHub\\Command-Pattern-Examples\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\ObserverSubject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|solutionrelative:Command Patterns Examples\\ObserverSubject.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|solutionrelative:Command Patterns Examples\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\CommandInputHandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|solutionrelative:Command Patterns Examples\\CommandInputHandler.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\CommandInputHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|solutionrelative:Command Patterns Examples\\CommandInputHandler.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,17 +18,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\main.cpp",
               "RelativeDocumentMoniker": "Command Patterns Examples\\main.cpp",
               "ToolTip": "C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\main.cpp",
               "RelativeToolTip": "Command Patterns Examples\\main.cpp",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAAAHoAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwLgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-07-25T08:39:55.33Z",
               "IsPinned": true,
@@ -40,28 +36,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CommandInputHandler.h",
-              "DocumentMoniker": "C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\CommandInputHandler.h",
-              "RelativeDocumentMoniker": "Command Patterns Examples\\CommandInputHandler.h",
-              "ToolTip": "C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\CommandInputHandler.h",
-              "RelativeToolTip": "Command Patterns Examples\\CommandInputHandler.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAWAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ObserverSubject.h",
+              "DocumentMoniker": "C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\ObserverSubject.h",
+              "RelativeDocumentMoniker": "Command Patterns Examples\\ObserverSubject.h",
+              "ToolTip": "C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\ObserverSubject.h",
+              "RelativeToolTip": "Command Patterns Examples\\ObserverSubject.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwA8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-07-29T13:54:11.771Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CommandInputHandler.cpp",
-              "DocumentMoniker": "C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\CommandInputHandler.cpp",
-              "RelativeDocumentMoniker": "Command Patterns Examples\\CommandInputHandler.cpp",
-              "ToolTip": "C:\\GitHub\\Command-Pattern-Examples\\Command Patterns Examples\\CommandInputHandler.cpp",
-              "RelativeToolTip": "Command Patterns Examples\\CommandInputHandler.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-07-29T13:54:24.583Z",
+              "WhenOpened": "2025-07-30T15:47:29.483Z",
               "EditorCaption": ""
             }
           ]

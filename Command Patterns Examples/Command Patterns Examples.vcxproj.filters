@@ -32,5 +32,11 @@
     <ClInclude Include="CommandInputHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FlyweightTrees.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObserverSubject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

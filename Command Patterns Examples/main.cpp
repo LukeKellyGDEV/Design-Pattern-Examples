@@ -1,10 +1,13 @@
 ﻿#include <iostream>
 #include "CommandUndoRedo.h"
 #include "CommandInputHandler.h"
+#include "FlyweightTrees.h"
+#include "ObserverSubject.h"
 #include <conio.h>
 #include <vector>
 #include <stack>
 #include <memory>
+#include <string>
 
 #define Key_UP 72
 #define Key_Down 80
@@ -17,11 +20,15 @@
 bool bTesting = true;
 void CommandPatternUndoRedo();
 void CommandPatternInputHandler();
+void FlyWeightPatternTrees();
+void ObserverPatternSubject();
 
 int main()
 {
 	//CommandPatternUndoRedo();
-	CommandPatternInputHandler();
+	//CommandPatternInputHandler();
+	//FlyWeightPatternTrees();
+	ObserverPatternSubject();
 	return 0;
 }
 
@@ -141,4 +148,40 @@ void CommandPatternInputHandler()
 			continue;
 		}
 	}
+}
+
+void FlyWeightPatternTrees()
+{
+	Tree treeOne(1.0f, 2.0f, 3.0f);
+	Tree treeTwo(4.0f, 12.0f, 13.0f);
+	Tree treeThree(100.0f, 200.0f, 300.0f);
+
+	//Model model;
+
+	//model.DrawOperation(treeOne);
+	//model.DrawOperation(treeTwo);
+
+	FlyWeightModelFactory factory;
+	
+	factory.GetFlyWeight("Oak Tree")->DrawOperation(treeOne);
+	factory.GetFlyWeight("Birch Tree")->DrawOperation(treeTwo);
+	factory.GetFlyWeight("Oak Tree")->DrawOperation(treeThree);
+}
+
+void ObserverPatternSubject()
+{
+	SomeSubject subject;
+	Watcher Watcher1("Watcher1");
+	Watcher Watcher2("Watcher2");
+	Watcher Watcher3("Watcher3");
+	subject.AddObserver(&Watcher1);
+	subject.AddObserver(&Watcher2);
+	subject.AddObserver(&Watcher3);
+
+	subject.NotifyAll();
+
+	subject.RemoveObserver(&Watcher3);
+
+	subject.NotifyAll();
+
 }
