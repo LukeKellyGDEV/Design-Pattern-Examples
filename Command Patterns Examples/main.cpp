@@ -171,9 +171,9 @@ void FlyWeightPatternTrees()
 void ObserverPatternSubject()
 {
 	SomeSubject subject;
-	Watcher Watcher1(subject,"Watcher1");
-	Watcher Watcher2(subject,"Watcher2");
-	Watcher Watcher3(subject,"Watcher3");
+	Watcher Watcher1(subject, SomeSubject::PLAYSOUND, "Watcher1");
+	Watcher Watcher2(subject, SomeSubject::HANDLEPHYSICS,"Watcher2");
+	Watcher Watcher3(subject, SomeSubject::LOG, "Watcher3");
 	
 
 	subject.NotifyAll();
