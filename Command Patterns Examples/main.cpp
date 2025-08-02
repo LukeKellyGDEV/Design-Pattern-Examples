@@ -3,11 +3,13 @@
 #include "CommandInputHandler.h"
 #include "FlyweightTrees.h"
 #include "ObserverSubject.h"
+#include "ObserverGroup_User.h"
 #include <conio.h>
 #include <vector>
 #include <stack>
 #include <memory>
 #include <string>
+#include <forward_list>
 
 #define Key_UP 72
 #define Key_Down 80
@@ -21,6 +23,7 @@ bool bTesting = true;
 void CommandPatternUndoRedo();
 void CommandPatternInputHandler();
 void FlyWeightPatternTrees();
+void ObserverGroupUser();
 void ObserverPatternSubject();
 
 int main()
@@ -28,7 +31,8 @@ int main()
 	//CommandPatternUndoRedo();
 	//CommandPatternInputHandler();
 	//FlyWeightPatternTrees();
-	ObserverPatternSubject();
+	//ObserverGroupUser();
+	//ObserverPatternSubject();
 	return 0;
 }
 
@@ -168,15 +172,35 @@ void FlyWeightPatternTrees()
 	factory.GetFlyWeight("Oak Tree")->DrawOperation(treeThree);
 }
 
+void ObserverGroupUser()
+{
+	Group* group = new Group;
+
+	User* user1 = new User(1);
+	User* user2 = new User(2);
+	User* user3 = new User(3);
+
+	group->subscribe(user1);
+	group->subscribe(user2);
+	group->subscribe(user3);
+
+	group->notify("new msg");
+
+	group->unsubscribe(user1);
+	group->notify("Brand new msg");
+
+}
+
 void ObserverPatternSubject()
 {
 	SomeSubject subject;
 	Watcher Watcher1(subject, SomeSubject::PLAYSOUND, "Watcher1");
-	Watcher Watcher2(subject, SomeSubject::HANDLEPHYSICS,"Watcher2");
+	Watcher Watcher2(subject, SomeSubject::HANDLEPHYSICS, "Watcher2");
 	Watcher Watcher3(subject, SomeSubject::LOG, "Watcher3");
-	
 
 	subject.NotifyAll();
+
+	subject.Notify(SomeSubject::LOG);
 
 	//subject.RemoveObserver(&Watcher3);
 

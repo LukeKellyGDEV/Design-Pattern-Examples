@@ -12,6 +12,7 @@ public:
 class Subject
 {
 public:
+	Subject() {}
 	virtual ~Subject() {}
 	// message is our 'enum' (PLAYSOUND, PHYSICSEVENT, LOG)
 	void AddObserver(int message, Observer* observer)
@@ -27,7 +28,24 @@ public:
 	}
 	void RemoveObserver(int message, Observer* observer)
 	{
-		//mObservers.remove(observer);
+		auto it = mObservers.find(message);
+		if (it != mObservers.end())
+		{
+			it->second.remove(observer);
+			//ObserversList& list = mObservers[message];
+			//for (ObserversList::iterator li = list.begin();
+			//							 li != list.end();)
+			//{
+			//	if ((*li) == observer)
+			//	{
+			//		list.remove(observer);
+			//	}
+			//	else
+			//	{
+			//		++li;
+			//	}
+			//}
+		}	
 	}
 
 	void NotifyAll()
@@ -43,6 +61,18 @@ public:
 		
 	}
 
+	void Notify(int message)
+	{
+		auto it = mObservers.find(message);
+		if (it != mObservers.end())
+		{
+			for (auto& element : mObservers[message])
+			{
+				element->OnNotify();
+			}
+		}
+	}
+
 private:
 	  typedef std::forward_list<Observer*> ObserversList;
 	  typedef std::map<int, ObserversList> ObserversMap;
@@ -52,23 +82,24 @@ private:
 class Watcher : public Observer
 {
 public:
-	explicit Watcher(Subject& subject, int message, const std::string& name) : mSubject(subject),  mName(name)
+	explicit Watcher(Subject& subject, int message, const std::string& name) : mSubject(subject), mMessage(message),  mName(name)
 	{
-		mSubject.AddObserver(message, this);
+		mSubject.AddObserver(mMessage, this);
 	}
 
 	~Watcher()
 	{
-		mSubject.RemoveObserver(message, this);
+		mSubject.RemoveObserver(mMessage, this);
 	}
 
-	void OnNotify() override
+	void OnNotify()
 	{
 		std::cout << "watcher-" << mName << std::endl;
 	}
 
 private:
 	std::string mName;
+	int mMessage;
 	Subject& mSubject;
 };
 
