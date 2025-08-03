@@ -4,6 +4,8 @@
 #include "FlyweightTrees.h"
 #include "ObserverSubject.h"
 #include "ObserverGroup_User.h"
+#include "PrototypeCar.h"
+#include "PrototypeBullet.h"
 #include <conio.h>
 #include <vector>
 #include <stack>
@@ -23,16 +25,20 @@ bool bTesting = true;
 void CommandPatternUndoRedo();
 void CommandPatternInputHandler();
 void FlyWeightPatternTrees();
-void ObserverGroupUser();
+void ObserverPatternGroupUser();
 void ObserverPatternSubject();
+void PrototypePatternCar();
+void PrototypePatternBullet();
 
 int main()
 {
 	//CommandPatternUndoRedo();
 	//CommandPatternInputHandler();
 	//FlyWeightPatternTrees();
-	//ObserverGroupUser();
+	//ObserverPatternGroupUser();
 	//ObserverPatternSubject();
+	//PrototypePatternCar();
+	PrototypePatternBullet();
 	return 0;
 }
 
@@ -172,7 +178,7 @@ void FlyWeightPatternTrees()
 	factory.GetFlyWeight("Oak Tree")->DrawOperation(treeThree);
 }
 
-void ObserverGroupUser()
+void ObserverPatternGroupUser()
 {
 	Group* group = new Group;
 
@@ -204,4 +210,60 @@ void ObserverPatternSubject()
 
 	//subject.RemoveObserver(&Watcher3);
 
+}
+
+void PrototypePatternCar()
+{
+	std::vector<std::unique_ptr<Car>> cars;
+
+	//Default
+	const auto prototypeRaceCar = 
+		std::make_unique<RaceCar>("", "", 0);
+
+	//Default
+	const auto prototypeFormulaOneCar =
+		std::make_unique<FormulaOneCar>("", "", 0);
+
+	auto red_Porsche = prototypeRaceCar->Clone();
+	red_Porsche->CarType("Porsche", "Red", 190);
+
+	cars.emplace_back(std::move(red_Porsche));
+
+	auto Orange_Mustang = prototypeRaceCar->Clone();
+	Orange_Mustang->CarType("Mustang", "Orange", 205);
+
+	cars.emplace_back(std::move(Orange_Mustang));
+
+	auto White_AstonMartin = prototypeFormulaOneCar->Clone();
+	White_AstonMartin->CarType("Aston Martin", "White", 265);
+
+	cars.emplace_back(std::move(White_AstonMartin));
+
+	auto Green_Mercedes = prototypeRaceCar->Clone();
+	Green_Mercedes->CarType("Mercedes", "Green", 175);
+
+	cars.emplace_back(std::move(Green_Mercedes));
+
+	for (auto& i : cars)
+	{
+		i->Print();
+	}
+}
+
+void PrototypePatternBullet()
+{
+	BulletFactory bulletFactory;
+
+	auto Bullet = bulletFactory.createBullet(STANDARD);
+	Bullet->fire(90);
+
+	cout << endl;
+	
+	Bullet = bulletFactory.createBullet(PIERCING);
+	Bullet->fire(180);
+
+	cout << endl;
+	
+	Bullet = bulletFactory.createBullet(EXPLOSIVE);
+	Bullet->fire(270);
 }

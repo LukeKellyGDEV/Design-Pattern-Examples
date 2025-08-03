@@ -41,5 +41,11 @@
     <ClInclude Include="ObserverGroup_User.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PrototypeCar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrototypeBullet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

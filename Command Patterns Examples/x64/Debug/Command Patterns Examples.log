@@ -1,4 +1,15 @@
 ﻿  main.cpp
-  Command Patterns Examples.vcxproj -> C:\GitHub\Command-Pattern-Examples\x64\Debug\Command Patterns Examples.exe
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory(3594,56): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory(3594,56): warning C4244:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory(3594,56): warning C4244:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory(3594,56): warning C4244:             _Ty=int
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory(3594,56): warning C4244:         ]
+  (compiling source file 'main.cpp')
+      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory(3594,56):
+      the template instantiation context (the oldest one first) is
+          C:\Github\Command-Pattern-Examples\Command Patterns Examples\PrototypeBullet.h(92,24):
+          see reference to function template instantiation 'std::unique_ptr<StandardBullet,std::default_delete<StandardBullet>> std::make_unique<StandardBullet,const char(&)[16],int,int,int,0>(const char (&)[16],int &&,int &&,int &&)' being compiled
+  
+  Command Patterns Examples.vcxproj -> C:\Github\Command-Pattern-Examples\x64\Debug\Command Patterns Examples.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

@@ -137,6 +137,8 @@
     <ClInclude Include="FlyweightTrees.h" />
     <ClInclude Include="ObserverSubject.h" />
     <ClInclude Include="ObserverGroup_User.h" />
+    <ClInclude Include="PrototypeBullet.h" />
+    <ClInclude Include="PrototypeCar.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
