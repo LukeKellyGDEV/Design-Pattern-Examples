@@ -139,6 +139,7 @@
     <ClInclude Include="ObserverGroup_User.h" />
     <ClInclude Include="PrototypeBullet.h" />
     <ClInclude Include="PrototypeCar.h" />
+    <ClInclude Include="SingletonDesignPattern.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

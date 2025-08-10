@@ -6,6 +6,7 @@
 #include "ObserverGroup_User.h"
 #include "PrototypeCar.h"
 #include "PrototypeBullet.h"
+#include "SingletonDesignPattern.h"
 #include <conio.h>
 #include <vector>
 #include <stack>
@@ -29,6 +30,7 @@ void ObserverPatternGroupUser();
 void ObserverPatternSubject();
 void PrototypePatternCar();
 void PrototypePatternBullet();
+void SingletonDesignPattern();
 
 int main()
 {
@@ -38,7 +40,8 @@ int main()
 	//ObserverPatternGroupUser();
 	//ObserverPatternSubject();
 	//PrototypePatternCar();
-	PrototypePatternBullet();
+	//PrototypePatternBullet();
+	SingletonDesignPattern();
 	return 0;
 }
 
@@ -266,4 +269,29 @@ void PrototypePatternBullet()
 	
 	Bullet = bulletFactory.createBullet(EXPLOSIVE);
 	Bullet->fire(270);
+}
+
+void SingletonDesignPattern()
+{
+	Singleton& SingletonOne = Singleton::get_instance();
+	SingletonOne.data = 20;
+
+	cout << "SingeTonOne.data = " << SingletonOne.data << endl;
+
+	Singleton& SingletonTwo = Singleton::get_instance();
+
+	cout << "SingeTonTwo.data = " << SingletonTwo.data << endl;
+
+	Singleton::get_instance().data = 50;
+
+	cout << "data: " << Singleton::get_instance().data << endl;
+	cout << "SingetonOne.data = " << SingletonOne.data << endl;
+	cout << "SingetonTwo.data = " << SingletonTwo.data << endl;
+
+	Singleton SingletonN = SingletonOne;
+
+	SingletonN.data = 100;
+
+	cout << "SingletonOne.data = " << SingletonOne.data << endl;
+	cout << "SingletonN.data = " << SingletonN.data << endl;
 }

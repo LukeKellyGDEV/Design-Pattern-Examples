@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Github\\Command-Pattern-Examples\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\PrototypeBullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|solutionrelative:Command Patterns Examples\\PrototypeBullet.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\SingletonDesignPattern.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|solutionrelative:Command Patterns Examples\\SingletonDesignPattern.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{757B9895-0E96-493A-B075-8BE9A1E8EC90}|Command Patterns Examples\\Command Patterns Examples.vcxproj|C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Command Patterns Examples\\main.cpp",
               "ToolTip": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\main.cpp",
               "RelativeToolTip": "Command Patterns Examples\\main.cpp",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAAAABAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABABAAAAAAAAAADwvycBAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-07-25T08:39:55.33Z",
               "IsPinned": true,
@@ -37,14 +37,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PrototypeBullet.h",
-              "DocumentMoniker": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\PrototypeBullet.h",
-              "RelativeDocumentMoniker": "Command Patterns Examples\\PrototypeBullet.h",
-              "ToolTip": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\PrototypeBullet.h",
-              "RelativeToolTip": "Command Patterns Examples\\PrototypeBullet.h",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAFYAAAA+AAAAAAAAAA==",
+              "Title": "SingletonDesignPattern.h",
+              "DocumentMoniker": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\SingletonDesignPattern.h",
+              "RelativeDocumentMoniker": "Command Patterns Examples\\SingletonDesignPattern.h",
+              "ToolTip": "C:\\Github\\Command-Pattern-Examples\\Command Patterns Examples\\SingletonDesignPattern.h",
+              "RelativeToolTip": "Command Patterns Examples\\SingletonDesignPattern.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-08-03T19:01:44.243Z",
+              "WhenOpened": "2025-08-10T19:45:39.385Z",
               "EditorCaption": ""
             }
           ]
