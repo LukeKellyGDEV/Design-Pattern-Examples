@@ -41,7 +41,7 @@ int main()
 	//ObserverPatternSubject();
 	//PrototypePatternCar();
 	//PrototypePatternBullet();
-	SingletonDesignPattern();
+	//SingletonDesignPattern();
 	return 0;
 }
 
