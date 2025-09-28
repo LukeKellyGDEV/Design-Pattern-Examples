@@ -6,7 +6,8 @@
 #include "ObserverGroup_User.h"
 #include "PrototypeCar.h"
 #include "PrototypeBullet.h"
-#include "SingletonDesignPattern.h"
+#include "SingletonDesignPatternEx1.h"
+#include "SingletonDesignPatternEx2.h"
 #include <conio.h>
 #include <vector>
 #include <stack>
@@ -30,7 +31,8 @@ void ObserverPatternGroupUser();
 void ObserverPatternSubject();
 void PrototypePatternCar();
 void PrototypePatternBullet();
-void SingletonDesignPattern();
+void SingletonDesignPatternEx1();
+void SingletonDesignPatternEx2();
 
 int main()
 {
@@ -41,7 +43,8 @@ int main()
 	//ObserverPatternSubject();
 	//PrototypePatternCar();
 	//PrototypePatternBullet();
-	//SingletonDesignPattern();
+	//SingletonDesignPatternEx1();
+	SingletonDesignPatternEx2();
 	return 0;
 }
 
@@ -271,27 +274,32 @@ void PrototypePatternBullet()
 	Bullet->fire(270);
 }
 
-void SingletonDesignPattern()
+void SingletonDesignPatternEx1()
 {
-	Singleton& SingletonOne = Singleton::get_instance();
+	SingletonEx1& SingletonOne = SingletonEx1::get_instance();
 	SingletonOne.data = 20;
 
 	cout << "SingeTonOne.data = " << SingletonOne.data << endl;
 
-	Singleton& SingletonTwo = Singleton::get_instance();
+	SingletonEx1& SingletonTwo = SingletonEx1::get_instance();
 
 	cout << "SingeTonTwo.data = " << SingletonTwo.data << endl;
 
-	Singleton::get_instance().data = 50;
+	SingletonEx1::get_instance().data = 50;
 
-	cout << "data: " << Singleton::get_instance().data << endl;
+	cout << "data: " << SingletonEx1::get_instance().data << endl;
 	cout << "SingetonOne.data = " << SingletonOne.data << endl;
 	cout << "SingetonTwo.data = " << SingletonTwo.data << endl;
 
-	Singleton SingletonN = SingletonOne;
+	SingletonEx1 SingletonN = SingletonOne;
 
 	SingletonN.data = 100;
 
 	cout << "SingletonOne.data = " << SingletonOne.data << endl;
 	cout << "SingletonN.data = " << SingletonN.data << endl;
+}
+
+void SingletonDesignPatternEx2()
+{
+	float number = SingletonEx2::GetRandomFloat();
 }

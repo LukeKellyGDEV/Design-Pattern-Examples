@@ -47,7 +47,10 @@
     <ClInclude Include="PrototypeBullet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SingletonDesignPattern.h">
+    <ClInclude Include="SingletonDesignPatternEx1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonDesignPatternEx2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
